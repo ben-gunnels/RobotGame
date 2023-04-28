@@ -2,7 +2,7 @@
 A simple command-line robot game in Java
 
 ![Scrap-E Cartoon](/craiyon_144920_Rusty_futuristic_metal_cute_cartoon_robot_with_boxy_features_and_smile.png)
-- Credit craiyon.com
+*Credit craiyon.com*
 # To Run
 Compile the RobotGame.java file in your command line:
 ```
