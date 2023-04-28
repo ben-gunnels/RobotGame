@@ -222,9 +222,19 @@ public class RobotGame {
         System.out.print("Enter your desired difficulty (easy, medium, hard): ");
         String difficulty = scanner.nextLine();
 
-        System.out.print("Enter your desired maximum score (<= 25): ");
-        int desiredScore = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.print("Enter your desired maximum score (1 - 25): ");
+            desiredScore = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
+
+            if (desiredScore >= 1 && desiredScore <= 25) {
+                validInput = true;
+            } else {
+                System.out.println("Invalid input! Please enter a value between 1 and 25.");
+            }
+        }
 
         Settings settings = new Settings(difficulty, desiredScore);
         Robot robot = new Robot(settings.getDifficulty());
@@ -234,6 +244,7 @@ public class RobotGame {
 
         System.out.println("Game Initializing...");
         Map map = new Map();
+        map.consumeMetal();
 
         while (robot.getScore() < maxScore && robot.getHealth() > 0) {
             System.out.println("Score: " + String.valueOf(robot.getScore()));
