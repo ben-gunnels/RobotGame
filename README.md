@@ -1,5 +1,7 @@
-# RobotGame
+# Scrap-E: A Scrap Metal Collection Game
 A simple command-line robot game in Java
+
+![Scrap-E Cartoon](/craiyon_144920_Rusty_futuristic_metal_cute_cartoon_robot_with_boxy_features_and_smile.png)
 
 # To Run
 Compile the RobotGame.java file in your command line:
